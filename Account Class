@@ -1,0 +1,44 @@
+package BankProject;
+
+public class Account {
+
+    private double Budget;
+
+    public Account(double Budget) {
+        this.Budget = Budget;
+    }
+
+    public double getBudget() {
+        return Budget;
+    }
+
+    public void setBudget(double Budget){
+        this.Budget = Budget;
+    }
+
+    public void LearnBudget(){
+        System.out.println("Budget: "+ Budget);
+    }
+    public double takeMoney(double moneyAmount) {
+        if (moneyAmount >= Budget) {
+            DontHaveEnoughMoney();
+        } else {
+            Budget -= moneyAmount;
+        }
+        return Budget;
+    }
+
+
+    public void DontHaveEnoughMoney() {
+        System.out.println("You dont have enough money");
+    }
+
+    public double payMoney(double moneyAmount){
+        return Budget+= moneyAmount;
+    }
+
+    @Override
+    public String toString(){
+        return "Current Budget: " + getBudget();
+    }
+}
