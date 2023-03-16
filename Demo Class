@@ -1,0 +1,13 @@
+package BankProject;
+
+public class Demo {
+
+   
+    public static void main(String[] args) {
+        Account account = new Account(200);
+        account.getBudget();
+        account.takeMoney(100);
+        account.payMoney(100);
+        account.LearnBudget();
+    }
+}
